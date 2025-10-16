@@ -1,6 +1,4 @@
 import requests
-# создать задачу, удалить созданную задачу, проверить что гет по удалённой задаче == 404
-
 
 def test_delete():
     body = {"title":"generated","completed":False}
