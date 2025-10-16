@@ -5,12 +5,16 @@ def test_add():
     response = requests.post("https://todo-app-sky.herokuapp.com/", json=body)
     response_body = response.json()
     
-    assert response.status_code == 202
+    assert response.status_code == 203
     assert response_body['completed'] == False
 
 
 
 def test_add_new():
+    """
+    Создать задачу, проставить отметку о выполнении и проверить что completed ==True
+    :return:
+    """
     body = {"title":"general","completed":False}
     response = requests.post("https://todo-app-sky.herokuapp.com/", json=body)
     id = response.json()["id"]
