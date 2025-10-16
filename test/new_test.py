@@ -1,6 +1,7 @@
 import requests
 
 def test_add():
+    """тест на изменение задачи и проверке соответствия id"""
     body = {"title":"Mihail","completed":False}
     response = requests.post("https://todo-app-sky.herokuapp.com/", json=body)
     response_body = response.json()
